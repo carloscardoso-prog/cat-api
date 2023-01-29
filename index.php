@@ -1,8 +1,11 @@
 <?php 
     //Post the form, get the data and mount the URL with the HTTP code of the post.
-    if(isset($_POST['cat-error-type'])){
+    $url = "";
+    if(isset($_POST['cat-error-type']) && !empty($_POST['cat-error-type'])){
         $url = "https://http.cat/" . $_POST['cat-error-type'] . '.jpg'; 
-        // $imgUrl = dirname(__FILE__).'\\img\\'; This is from a future commit to save the img in the folder.
+        $imgUrl = dirname(__FILE__).'\\img\\cat-img.jpg'; // This is from a future commit to save the img in the folder.
+
+        file_put_contents($imgUrl, file_get_contents($url));
     }
 ?>
 <!DOCTYPE html>
@@ -48,8 +51,7 @@
         </div>  
     </div>
     <div class="container">
-        <img style="margin-top: 4vh; width: 50%" class="rounded mx-auto d-block" src="<?php echo $url?>" alt="">
-         <!-- URL gets the image and posts in the IMG tag. -->
+        <img style="margin-top: 4vh; width: 50%" class="rounded mx-auto d-block" src="img/cat-img.jpg" alt="">
     </div>
 </body>
 </html>
