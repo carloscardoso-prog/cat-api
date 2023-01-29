@@ -21,14 +21,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </head>
 <style>
+    html{
+        min-height: 100%;
+    }
     .background-image{
-        z-index: -999;
-        position: absolute;
-        width: 100%;
-        height: auto;
+        background-image: url('img/stupid-cat.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .image-response{
+        margin-top: 4vh; 
+        min-width: 20%;; 
+        width: 60%;
     }
 </style>
-<body>
+<body class="background-image">
     <div class="header">
         <nav class="navbar navbar-light bg-light">
             <div class="container" style="justify-content: center;">
@@ -37,7 +45,6 @@
         </nav>
     </div>
     <div class="container h-100 d-flex align-items-center justify-content-center" style="margin-top: 2vh">  
-    <img src="img/stupid-cat.gif" class="opacity-50 background-image">
         <div class="row">
             <div class="col-md-12 text-center">
                 <form method="post">
@@ -51,7 +58,7 @@
         </div>  
     </div>
     <div class="container">
-        <img style="margin-top: 4vh; width: 50%" class="rounded mx-auto d-block" src="img/cat-img.jpg" alt="">
+        <img class="rounded mx-auto d-block image-response" src="img/cat-img.jpg" alt="">
     </div>
 </body>
 </html>
