@@ -32,7 +32,7 @@
     }
     .image-response{
         margin-top: 4vh; 
-        min-width: 20%;; 
+        min-width: 20%;
         width: 60%;
     }
 </style>
